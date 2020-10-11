@@ -7,9 +7,9 @@ Outputs JSON (for react inlines) and svg.
 ```js
 var sprite = require('gulp-svg-symbol-view');
 
-gulp.task('svg', function () {
-    return gulp.src(['fixture/*.svg'])
-	.pipe(sprite({
+function sprite() {
+	return gulp.src(['./fixture/*.svg'])
+	.pipe(svgSprite({
 		name: 'sprite',
 		json: true,
 		monochrome: {
@@ -21,7 +21,9 @@ gulp.task('svg', function () {
 			{ removeStyleElement: true }
 		]}
 	}))
-    .pipe(gulp.dest('dest'));
-});
+	.pipe(gulp.dest('./dest'));
+};
+
+exports.sprite = sprite;
 ```
 
