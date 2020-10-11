@@ -1,5 +1,4 @@
 'use strict';
-'use strict';
 var gulp = require('gulp');
 var sprite = require('./');
 
