@@ -1,4 +1,4 @@
-# gulp-svg-symbol-sprite
+# gulp-svg-symbol-view
 Generate sprites symbols from svgs by cleaning them up with svgo and concatenating them. 
 Outputs JSON (for react inlines) and svg. 
 
