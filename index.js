@@ -30,16 +30,17 @@ module.exports = (opt) => {
 		monochrome: false,
 		svgo: { plugins: [] }
 	};
-	
-	if (typeof opt === 'String') {
+
+	options = {...options, ...opt };
+	options.svgo.plugins.push({ removeViewBox: false });
+
+	if (options.monochrome) {
+		options.svgo.plugins.push({ removeAttrs: { attrs: '(fill|stroke)' }});
+	} 
+
+	if (typeof opt === 'string') {
 		options.name = opt;
-	} else {
-		options = {...options, ...opt };
-		options.svgo.plugins.push({ removeViewBox: false });
-		if (options.monochrome) {
-			options.svgo.plugins.push({ removeAttrs: { attrs: '(fill|stroke)' }});
-		} 
-	}
+	} 
 
 	let svgo = new SVGO(options.svgo);
 	let symbols = [];
@@ -149,3 +150,4 @@ module.exports = (opt) => {
 		}
 	);
 };
+
