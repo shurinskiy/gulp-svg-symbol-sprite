@@ -16,7 +16,7 @@ function sprite() {
 			darkcyan: '#008b8b',
 			white: '#ffffff'
 		},
-		svgo: {plugins: [
+		svgo: { plugins: [
 			{ removeRasterImages: true },
 			{ removeStyleElement: true }
 		]}
