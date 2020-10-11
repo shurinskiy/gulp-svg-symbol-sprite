@@ -5,9 +5,11 @@ Outputs JSON (for react inlines) and svg.
 ## Usage:
 
 ```js
+var sprite = require('gulp-svg-symbol-sprite');
+
 gulp.task('svg', function () {
     return gulp.src(['fixture/*.svg'])
-	.pipe($.svgToSymbol({
+	.pipe(sprite({
 		name: 'sprite.svg',
 		monochrome: {
 			darkcyan: '#008b8b',
