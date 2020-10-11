@@ -29,5 +29,7 @@
     "through2": "^4.0.2",
     "vinyl": "^2.2.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "gulp": "^4.0.2"
+  }
 }
