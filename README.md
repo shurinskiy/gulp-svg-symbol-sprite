@@ -27,3 +27,19 @@ function sprite() {
 exports.sprite = sprite;
 ```
 
+html:
+```html
+<svg class="icon">
+	<use xlink:href="images/sprite.svg#icon-1"></use>
+</svg>
+```
+
+css:
+```css
+.icon {
+	background: url('images/sprite.svg#icon-1-view-darkcyan') center / 30px 30px no-repeat transparent;
+}
+.icon:hover {
+	background-image: url('images/sprite.svg#icon-1-view-white');
+}
+```
