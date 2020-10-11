@@ -25,7 +25,8 @@ let clone = (obg) => {
 module.exports = (opt) => {
 
 	let options = {
-		name: 'sprite.svg',
+		name: 'sprite',
+		json: false,
 		monochrome: false,
 		svgo: { plugins: [] }
 	};
@@ -126,12 +127,21 @@ module.exports = (opt) => {
 		},
 		function (cb) {
 			let data = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">${jsontoxml(symbols)} ${jsontoxml(views)} ${jsontoxml(uses)}</svg>`;
-
+			if (options.json) {
+				this.push(
+					new Vinyl({
+						cwd: latestFile.cwd,
+						base: latestFile.base,
+						path: path.join(latestFile.base, `${options.name}.json`),
+						contents: Buffer.from(JSON.stringify(symbols))
+					})
+				);			
+			}
 			this.push(
 				new Vinyl({
 					cwd: latestFile.cwd,
 					base: latestFile.base,
-					path: path.join(latestFile.base, options.name),
+					path: path.join(latestFile.base, `${options.name}.svg`),
 					contents: Buffer.from(data)
 				})
 			);
@@ -139,4 +149,3 @@ module.exports = (opt) => {
 		}
 	);
 };
-
