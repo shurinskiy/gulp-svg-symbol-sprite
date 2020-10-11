@@ -4,6 +4,7 @@ Outputs JSON (for react inlines) and svg.
 
 ## Usage:
 
+gulpfile.js:
 ```js
 var sprite = require('gulp-svg-symbol-view');
 
