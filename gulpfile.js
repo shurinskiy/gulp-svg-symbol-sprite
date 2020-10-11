@@ -1,11 +1,12 @@
 'use strict';
 var gulp = require('gulp');
-var sprite = require('./');
+var svgSprite = require('./');
 
-gulp.task('default', function () {
+function sprite() {
 	return gulp.src(['./fixture/*.svg'])
-	.pipe(sprite({
-		name: 'sprite.svg',
+	.pipe(svgSprite({
+		name: 'sprite',
+		json: true,
 		monochrome: {
 			darkcyan: '#008b8b',
 			burlywood: '#deb887',
@@ -13,4 +14,6 @@ gulp.task('default', function () {
 		}
 	}))
 	.pipe(gulp.dest('./dest'));
-});
+};
+
+exports.sprite = sprite;
