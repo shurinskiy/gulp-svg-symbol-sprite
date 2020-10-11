@@ -1,18 +1,15 @@
 {
-  "name": "gulp-svg-symbol-sprite",
-  "version": "2.0.1",
-  "description": "Sprites svgs into a single file",
+  "name": "gulp-svg-to-symbol",
+  "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:mllrsohn/gulp-svg-symbol-sprite.git"
-  },
-  "engines": {
-    "node": ">=4.0.0"
-  },
+    "url": "git+https://github.com/shurinskiy/gulp-svg-symbol-sprite"
+  },  
   "keywords": [
     "svg",
     "sprite",
@@ -21,19 +18,16 @@
   ],
   "files": [
     "index.js"
-  ],
-  "author": "Steffen Müller",
-  "license": "MIT",
+  ],  
+  "author": "Steffen Müller, Alexandr Tumanov",
+  "license": "ISC",
+  "dependencies": {},
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "prettier": "^1.10.2"
-  },
-  "dependencies": {
-    "gulp-util": "^3.0.8",
-    "jsontoxml": "^1.0.0",
-    "jstoxml": "^1.1.3",
-    "svg-parser": "^1.0.5",
-    "svgo": "^1.0.4",
-    "through2": "^2.0.3"
+    "jsontoxml": "^1.0.1",
+    "plugin-error": "^1.0.1",
+    "svg-parser": "^2.0.4",
+    "svgo": "^1.3.2",
+    "through2": "^4.0.2",
+    "vinyl": "^2.2.1"
   }
 }
