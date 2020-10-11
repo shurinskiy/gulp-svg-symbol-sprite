@@ -8,7 +8,7 @@ Outputs JSON (for react inlines) and svg.
 var sprite = require('gulp-svg-symbol-view');
 
 function sprite() {
-	return gulp.src(['./src/images/**/*.svg'])
+	return gulp.src('./src/images/**/*.svg')
 	.pipe(svgSprite({
 		name: 'sprite',
 		json: true,
