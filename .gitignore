@@ -3,6 +3,5 @@ node_modules/
 .vscode/
 *.rar
 *.zip
-gulpfile.js
 .DS_Store
 Thumbs.db
