@@ -1,4 +1,5 @@
-# gulp-svg-symbol-view
+# gulp-svg-symbol-view [![npm version](https://badge.fury.io/js/gulp-svg-symbol-view.svg)](http://badge.fury.io/js/gulp-svg-symbol-view)
+
 Generate sprites symbols from svgs by cleaning them up with svgo and concatenating them. Outputs svg and JSON (for react inlines). 
 
 This piece was inspired by a rather old [article by David Bushels](https://dbushell.com/2015/01/30/use-svg-part-2). There he describes one cool way to use a symbol sprite to set backgrounds in css. The point is that it is impossible to link from css to symbol groups inside a sprite without additional constructions.
