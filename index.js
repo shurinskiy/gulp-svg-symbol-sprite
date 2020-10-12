@@ -127,7 +127,10 @@ module.exports = (opt) => {
 			}
 		},
 		function (cb) {
+			if (!latestFile) return cb();
+
 			let data = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">${jsontoxml(symbols)} ${jsontoxml(views)} ${jsontoxml(uses)}</svg>`;
+
 			if (options.json) {
 				this.push(
 					new Vinyl({
