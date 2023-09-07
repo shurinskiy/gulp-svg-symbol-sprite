@@ -18,8 +18,8 @@ let mapChild = (child) => {
 	return mappedChild;
 };
 
-let clone = (obg) => {
-	return JSON.parse(JSON.stringify(obg));
+let clone = (obj) => {
+	return JSON.parse(JSON.stringify(obj));
 }
 
 module.exports = (opt) => {

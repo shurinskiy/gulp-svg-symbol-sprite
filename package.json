@@ -24,7 +24,7 @@
     "jsontoxml": "^1.0.1",
     "plugin-error": "^1.0.1",
     "svg-parser": "^2.0.4",
-    "svgo": "^1.3.2",
+    "svgo": "^2.8.0",
     "through2": "^4.0.2",
     "vinyl": "^2.2.1"
   }
