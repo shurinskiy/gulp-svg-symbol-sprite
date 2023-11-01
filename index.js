@@ -103,7 +103,8 @@ module.exports = (opt) => {
 						let ctr = 0;
 						for (const color in options.monochrome) {
 							let current_shift = shift + height*ctr;
-							
+
+							view.attrs.preserveAspectRatio = 'none';
 							view.attrs.id = `${id}-view-${color}`;
 							use.attrs.style = `fill:${options.monochrome[color]}`;
 

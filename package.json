@@ -1,6 +1,6 @@
 {
   "name": "gulp-svg-symbol-view",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generate sprites symbols from svgs by cleaning them up with svgo and concatenating them.",
   "main": "index.js",
   "scripts": {
@@ -22,10 +22,10 @@
   },
   "dependencies": {
     "jsontoxml": "^1.0.1",
-    "plugin-error": "^1.0.1",
+    "plugin-error": "^2.0.1",
     "svg-parser": "^2.0.4",
-    "svgo": "^2.8.0",
+    "svgo": "^3.0.2",
     "through2": "^4.0.2",
-    "vinyl": "^2.2.1"
+    "vinyl": "^3.0.0"
   }
 }
